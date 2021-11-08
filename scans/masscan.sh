@@ -41,18 +41,18 @@ if ! [[ -e $LOG_PATH ]]; then
 	touch $LOG_PATH
 fi
 
+# Create directory and set path to save results
+mkdir -p ../logs/$TODAY/$identifier/scans
+SAVE_PATH="../logs/$TODAY/$identifier/scans/masscan.txt"
+
 # Log masscan
 echo "$DATETIME" >> $LOG_PATH
 echo "mass scan conducted on $network" >> $LOG_PATH
-echo "Details saved in logs/$identifier/scans" >> $LOG_PATH
+echo "Details saved in logs/$TODAY/$identifier/scans" >> $LOG_PATH
 echo "" >> $LOG_PATH
-
-# Create directory and set path to save results
-mkdir -p ../logs/$identifier/scans
-SAVE_PATH="../logs/$identifier/scans/masscan.txt"
 
 # Run masscan
 echo "[*] Scanning $network"
 masscan $network -p0-65535 --ports U:0-65535 --rate=100000 > $SAVE_PATH
 
-echo "[*] Results of scan can be found in logs/$identifier/scans"
+echo "[*] Results of scan can be found in logs/$TODAY/$identifier/scans"

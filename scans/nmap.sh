@@ -62,7 +62,7 @@ if ! [[ -e $LOG_PATH ]]; then
 fi
 
 # Create directory and set path to save results
-SAVE_PATH="../logs/$identifier/scans"
+SAVE_PATH="../logs/$TODAY/$identifier/scans"
 mkdir -p "$SAVE_PATH"
 
 # Conduct nmap scan on ip address/network
@@ -73,7 +73,7 @@ if [[ $aggressive == 1 ]]; then
 	# Log nmap scan
 	echo "$DATETIME" >> $LOG_PATH
 	echo "Aggressive nmap scan conducted on $target" >> $LOG_PATH
-	echo "Details saved in logs/$identifier/scans" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$identifier/scans" >> $LOG_PATH
 	echo "" >> $LOG_PATH
 
 	# Run nmap scan
@@ -82,7 +82,7 @@ else
 	# Log nmap scan
 	echo "$DATETIME" >> $LOG_PATH
 	echo "Silent nmap scan conducted on $target" >> $LOG_PATH
-	echo "Details saved in logs/$identifier/scans" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$identifier/scans" >> $LOG_PATH
 	echo "" >> $LOG_PATH
 	
 	# Run nmap scan
@@ -96,12 +96,12 @@ if [[ $udp == 1 ]]; then
 	# Log nmap scan
 	echo "$DATETIME" >> LOG_PATH
 	echo "UDP scan conducted on $target" >> LOG_PATH
-	echo "Details saved in logs/$target/scans" >> LOG_PATH
+	echo "Details saved in logs/$TODAY/$target/scans" >> LOG_PATH
 	echo "" >> LOG_PATH
 
 	# Run UDP nmap scan
 	echo "[*] Scanning $target's UDP ports"
 	nmap -sUV -Pn -p- -T4 -v -oA "$SAVE_PATH/nmap_UDP" $target
 
-	echo "[*] Results of scan can be found in logs/$identifier/scans"
+	echo "[*] Results of scan can be found in logs/$TODAY/$identifier/scans"
 fi

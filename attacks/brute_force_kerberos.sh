@@ -53,16 +53,16 @@ if ! [[ -e $LOG_PATH ]]; then
 fi
 
 # Create directory and set path to save results
-mkdir -p ../logs/$IP/attacks
-SAVE_PATH="../logs/$IP/attacks/brute_force_kerberos.txt"
+mkdir -p ../logs/$TODAY/$IP/attacks
+SAVE_PATH="../logs/$TODAY/$IP/attacks/brute_force_kerberos.txt"
 
-# Parse user_list to only get txt file and not full path
-user_list=$(echo $user_list | awk -F/ '{print $NF}')
+# Parse user_file to only get txt file and not full path
+user_file_parsed=$(echo $user_file | awk -F/ '{print $NF}')
 
 # Log brute force kerberos attack
 echo "$DATETIME" >> $LOG_PATH
 echo "Kerberos brute force attack conducted on $IP" >> $LOG_PATH
-echo "username list used: $user_list" >> $LOG_PATH
+echo "username list used: $user_file_parsed" >> $LOG_PATH
 echo "Details saved in logs/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
 echo "" >> $LOG_PATH
 

@@ -89,14 +89,14 @@ if ! [[ -e $LOG_PATH ]]; then
 fi
 
 # Create directory and set path to save results
-mkdir -p ../logs/$target/attacks
-SAVE_PATH="../logs/$target/attacks/MitM.pcap"
+mkdir -p ../logs/$TODAY/$target/attacks
+SAVE_PATH="../logs/$TODAY/$target/attacks/MitM.pcap"
 
 # Log Man in the Middle attack
 echo "$DATETIME" >> $LOG_PATH
 echo "Man in the Middle attack conducted on $target" >> $LOG_PATH
 echo "Routed from router IP address $router" >> $LOG_PATH
-echo "pcap file saved in logs/$target/attacks/MitM.pcap" >> $LOG_PATH
+echo "pcap file saved in logs/$TODAY/$target/attacks/MitM.pcap" >> $LOG_PATH
 echo "" >> $LOG_PATH
 
 # enable ip forwarding
@@ -121,4 +121,4 @@ pkill -2 "tshark"
 # disable ip forwarding when script is terminated
 sudo sysctl -w net.ipv4.ip_forward=0
 
-echo "pcap file saved in logs/$target/attacks/MitM.pcap"
+echo "pcap file saved in logs/$TODAY/$target/attacks/MitM.pcap"

