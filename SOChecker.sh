@@ -7,6 +7,59 @@ banner() {
 	echo "Hello World!"
 }
 
+# Help
+help() {
+	echo "Syntax: sudo bash SOChecker.sh install | scan | attack "
+	echo "options:"
+	echo "  install: Install required programs for script to work"
+	echo "  scan: Scan ip addresses/networks for open ports"
+	echo "  attack: Run common network attacks on Windows and/or Linux machines"
+}
+
+# Check for missing programs
+check_programs() {
+	uninstalled_programs=()
+
+	# Check for nmap
+	if ! [ -x "$(command -v nmap)" ]; then
+		uninstalled_programs+=( "nmap" )
+	fi
+
+	# Check for masscan
+	if ! [ -x "$(command -v masscan)" ]; then
+		uninstalled_programs+=( "masscan" )
+	fi
+
+	# Check for hydra
+	if ! [ -x "$(command -v hydra)" ]; then
+		uninstalled_programs+=( "hydra" )
+	fi
+
+	# Check for msfconsole
+	if ! [ -x "$(command -v msfconsole)" ]; then
+		uninstalled_programs+=( "metasploit-framework" )
+	fi
+
+	# Check for arpspoof
+	if ! [ -x "$(command -v arpspoof)" ]; then
+		uninstalled_programs+=( "dsniff" )
+	fi
+
+	# Check for tshark
+	if ! [ -x "$(command -v arpspoof)" ]; then
+		uninstalled_programs+=( "tshark" )
+	fi
+
+	# Check number of uninstalled programs
+	if [[ ${#uninstalled_programs[@]} > 0 ]]; then
+		echo "[!] This script requires the following programs to work properly: "
+		for program in ${uninstalled_programs[@]}; do
+			echo $program 
+		done
+		echo "[!] Please run sudo bash SOChecker.sh install"
+		exit 
+}
+
 # Install programs
 install_programs() {
 
@@ -67,6 +120,9 @@ install_programs() {
 
 # Scan machine/network
 scan() {
+	# Check if programs have been installed
+	check_programs
+
 	# change directory to scans to more easily access scripts
 	cd scans
 
@@ -113,6 +169,9 @@ scan() {
 
 # Attack machine/network
 attack() {
+	# Check if programs have been installed 
+	check_programs
+	
 	# change directory to scans to more easily access scripts
 	cd attacks
 
@@ -257,14 +316,17 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-install_programs
+# Parse argument
+argument=$1
 
-read -p "[?] Do you want to conduct scans or attacks? [s/a] " input
-if [[ $input == "s" ]]; then
+if [[ $argument == "install" ]]; then
+	install_programs
+elif [[ $argument == "scan" ]]; then
 	scan
-elif [[ $input == "a" ]]; then
+elif [[ $argument == "attack" ]]; then
 	attack
 else
-	echo "[!] Please enter s/a"
+	echo "[!] You did not enter a valid argument."
+	help
 	exit 2
 fi
