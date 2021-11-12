@@ -29,7 +29,9 @@ shift $((OPTIND -1))
 
 # Get network from user
 network=$1
+cidr=$(echo $network | awk -F/ '{print $2}')
 identifier=$(echo $network | awk -F/ '{print $1}')
+identifier="${identifier}_${cidr}"
 
 # Get date and time to log actions taken
 TODAY=$(date +%d%m%y)

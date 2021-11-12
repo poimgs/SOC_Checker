@@ -2,11 +2,6 @@
 
 # Functions
 
-# Banner
-banner() {
-	echo "Hello World!"
-}
-
 # Help
 help() {
 	echo "Syntax: sudo bash SOChecker.sh install | scan | attack "
@@ -52,17 +47,18 @@ check_programs() {
 
 	# Check number of uninstalled programs
 	if [[ ${#uninstalled_programs[@]} > 0 ]]; then
-		echo "[!] This script requires the following programs to work properly: "
+		echo "[!] This script requires the following programs to work properly:"
 		for program in ${uninstalled_programs[@]}; do
 			echo $program 
 		done
+
 		echo "[!] Please run sudo bash SOChecker.sh install"
 		exit 
+	fi
 }
 
 # Install programs
 install_programs() {
-
 	uninstalled_programs=()
 
 	# Check for nmap
@@ -114,6 +110,10 @@ install_programs() {
 		for program in ${uninstalled_programs[@]}; do
 			sudo apt-get install $program
 		done
+
+	# Inform user that nothing needs to be installed
+	else
+		echo "[*] All required programs are already installed"
 	fi
 
 }
@@ -131,22 +131,24 @@ scan() {
 	if [[ $scan_range == "n" ]]; then
 		read -p "[?] Do you want to use nmap or masscan to scan the network? [N/m] " scan_technique
 		read -p "[?] Network to scan: (CIDR format) " scan_target
-		if [[ -z $scan_target ]]; then
-			echo "[!] Please don't keep pressing enter, we need an entry for this!"
-			read -p "[?] Network to scan: (CIDR format) " scan_target
+		if ! [[ $scan_target =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/[0-9]{1,2}$ ]]; then
+			echo "[!] Please enter a valid network in CIDR format"
+			exit 2
 		fi
 	else
 		read -p "[?] IP address to scan: " scan_target
-		if [[ -z $scan_target ]]; then
-			echo "[!] Please don't keep pressing enter, we need an entry for this!"
-			read -p "[?] IP address to scan: " scan_target
+		if ! [[ $scan_target =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+			echo "[!] Please enter a valid IP address"
+			exit 2
 		fi
 	fi
 
 	# Check what kind of nmap scan the user wants to conduct
 	if [[ $scan_range != "n" || $scan_technique != "m" ]]; then
 		read -p "[?] Silent or Aggressive nmap scan? [S/a] " nmap_aggressiveness
-		read -p "[?] Scan UDP ports? [y/N] " udp_scan
+		if [[ $nmap_aggressiveness == "a" ]]; then
+			read -p "[?] Scan UDP ports? [y/N] " udp_scan
+		fi
 	fi
 
 	# Begin scanning based on user input
@@ -171,7 +173,7 @@ scan() {
 attack() {
 	# Check if programs have been installed 
 	check_programs
-	
+
 	# change directory to scans to more easily access scripts
 	cd attacks
 
@@ -195,16 +197,16 @@ attack() {
 
 		# Get IP address
 		read -p "[?] IP address: " IP
-		if [[ -z $IP ]]; then
-			echo "[!] Please don't keep pressing enter, we need an entry for this!"
-			read -p "[?] IP address: " IP
+		if ! [[ $IP =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+			echo "[!] Please enter a valid IP address"
+			exit 2
 		fi
 
 		# Get domain name
 		read -p "[?] Domain name: " domain
 		if [[ -z $domain ]]; then
 			echo "[!] Please don't keep pressing enter, we need an entry for this!"
-			read -p "[?] Domain name: " domain
+			exit 2
 		fi
 
 		# Use default kerberos list
@@ -223,9 +225,9 @@ attack() {
 
 		# Get IP address
 		read -p "[?] IP address: " IP
-		if [[ -z $IP ]]; then
-			echo "[!] Please don't keep pressing enter, we need an entry for this!"
-			read -p "[?] IP address: " IP
+		if ! [[ $IP =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+			echo "[!] Please enter a valid IP address"
+			exit 2
 		fi
 
 		# Get port number (optional)
@@ -308,7 +310,6 @@ attack() {
 }
 
 # Script
-banner
 
 # Check if user is root
 if [[ $EUID -ne 0 ]]; then

@@ -46,7 +46,9 @@ target=$1
 
 # If target is a network, parse to only get host identifier
 if [[ $target =~ .*/.* ]]; then
+	cidr=$(echo $target | awk -F/ '{print $2}')
 	identifier=$(echo $target | awk -F/ '{print $1}')
+	identifier="${identifier}_${cidr}"
 else
 	identifier=$target
 fi
