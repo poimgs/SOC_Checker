@@ -1,4 +1,0 @@
-# Nmap 7.92 scan initiated Wed Nov 10 15:36:20 2021 as: nmap -sS -Pn -p- -oA ../logs/101121/192.168.8.133/scans/nmap_silent 192.168.8.133
-Host: 192.168.8.133 ()	Status: Up
-Host: 192.168.8.133 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65533)
-# Nmap done at Wed Nov 10 15:36:24 2021 -- 1 IP address (1 host up) scanned in 4.04 seconds

@@ -25,9 +25,6 @@ def main():
 
 	if ip_type == "ip_address":
 		components.ip_analysis(log_date_path, selected_ip)
-
-	# # Load analysis of scans and attacks conducted on to ip/network
-	# components.scans_and_attacks_columns(log_date_path, selected_ip)
 		
 	components.horizontal_line()
 
