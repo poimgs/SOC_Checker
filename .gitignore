@@ -1,3 +1,5 @@
 logs/*
 attacks/hydra.restore
-app
+app/__pycache__
+app/env
+app/requirements_no_version.txt
