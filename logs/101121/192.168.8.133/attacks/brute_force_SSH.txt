@@ -1,0 +1,2 @@
+# Hydra v9.1 run at 2021-11-10 15:48:28 on 192.168.8.133 ssh (hydra -l osboxes -p osboxes.org -s 22 -o ../logs/101121/192.168.8.133/attacks/brute_force_SSH.txt -vV 192.168.8.133 ssh)
+[22][ssh] host: 192.168.8.133   login: osboxes   password: osboxes.org

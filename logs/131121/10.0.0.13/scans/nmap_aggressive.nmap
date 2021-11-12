@@ -1,0 +1,27 @@
+# Nmap 7.92 scan initiated Sat Nov 13 01:09:17 2021 as: nmap -A -Pn -p- -oA ../logs/131121/10.0.0.13/scans/nmap_aggressive 10.0.0.13
+Nmap scan report for 10.0.0.13
+Host is up (0.00046s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.4p1 Debian 6 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 a0:d0:79:d0:6e:42:3a:0f:6a:80:af:c8:dc:59:85:0e (RSA)
+|   256 0e:f4:7a:a1:d4:2d:42:a2:21:d3:91:b0:4a:14:2c:24 (ECDSA)
+|_  256 59:a4:7c:c4:73:58:2d:c2:4e:8e:94:48:fb:d7:cf:01 (ED25519)
+80/tcp open  http    Apache httpd 2.4.48 ((Debian))
+|_http-title: Apache2 Debian Default Page: It works
+|_http-server-header: Apache/2.4.48 (Debian)
+MAC Address: 00:0C:29:70:46:CA (VMware)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.6
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.46 ms 10.0.0.13
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 13 01:09:44 2021 -- 1 IP address (1 host up) scanned in 26.55 seconds

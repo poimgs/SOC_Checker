@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Wed Nov 10 21:31:09 2021 as: nmap -A -Pn -p- -oA ../logs/101121/192.168.8.133/scans/nmap_aggressive 192.168.8.133
+Host: 192.168.8.133 ()	Status: Up
+Host: 192.168.8.133 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.4p1 Debian 5 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.48 ((Debian))/	Ignored State: closed (65533)	OS: Linux 4.15 - 5.6	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Wed Nov 10 21:31:21 2021 -- 1 IP address (1 host up) scanned in 12.61 seconds

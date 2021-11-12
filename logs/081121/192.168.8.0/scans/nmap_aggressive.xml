@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Nov  8 21:52:33 2021 as: nmap -A -Pn -p- -oA ../logs/081121/192.168.8.0/scans/nmap_aggressive 192.168.8.0/24 -->
+<nmaprun scanner="nmap" args="nmap -A -Pn -p- -oA ../logs/081121/192.168.8.0/scans/nmap_aggressive 192.168.8.0/24" start="1636379553" startstr="Mon Nov  8 21:52:33 2021" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.2" addrtype="ipv4"/>
+<address addr="00:50:56:ED:F4:00" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.1" addrtype="ipv4"/>
+<address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.133" addrtype="ipv4"/>
+<address addr="00:0C:29:07:CC:2E" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.254" addrtype="ipv4"/>
+<address addr="00:50:56:F4:C1:C7" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1636379555" endtime="1636379754"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.1" addrtype="ipv4"/>
+<address addr="00:50:56:C0:00:08" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65528">
+<extrareasons reason="no-response" count="65528" proto="tcp" ports="1-7679,7681-9011,9014-27035,27037-49668,49671-57622,57624-65535"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9012"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="websocket" product="WebSocket++" version="0.8.1" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:zaphoyd:websocketpp:0.8.1</cpe></service><script id="ssl-cert" output="Subject: commonName=Peter Thorson/organizationName=Zaphoyd Studios/stateOrProvinceName=Illinois/countryName=US&#xa;Not valid before: 2011-11-15T21:20:06&#xa;Not valid after:  2012-11-14T21:20:06"><table key="subject">
+<elem key="commonName">Peter Thorson</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">webmaster@zaphoyd.com</elem>
+<elem key="localityName">Chicago</elem>
+<elem key="organizationName">Zaphoyd Studios</elem>
+<elem key="organizationalUnitName">WebSocket++</elem>
+<elem key="stateOrProvinceName">Illinois</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Peter Thorson</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">webmaster@zaphoyd.com</elem>
+<elem key="localityName">Chicago</elem>
+<elem key="organizationName">Zaphoyd Studios</elem>
+<elem key="organizationalUnitName">WebSocket++</elem>
+<elem key="stateOrProvinceName">Illinois</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D474B5DC009C807C23DA9167B41BCC4598F7946933B1889F4BBFF681FDD0FCDD1E2134AD74A4293FB2C375D4CC7D22C39B74E5D130482FACAD23F9566E1C03A91773DE1A81555A3D6F3DB4671D3F87C7A6D0ABB92AF342C0D710B08F979514BCCA406147068AC75760F37F11E3A8A9BF70296C685B999112CCB2796592F3D7D8379A94FDDD10A5B4AF116821A8B6CBFD94B684E9574FD2EE7CE780FAF1E2575FD3FE1E710BB79C207D36603430D449EAC5B3E690B3DC593873B4B4BD162B9F34344C4617286A3D9BF550C7BC3C1D6DE0344F9BF9A8D746DF82DA6A960E7A5C7340C3AD3347FD0E0A9E868772C65DAA9BD99196AE37D9D94E1330E75423CD1F01</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">D3:3C:A7:CD:32:72:8E:CA:48:6F:FA:F2:92:EE:FA:A5:E4:9B:0C:CB</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:D3:3C:A7:CD:32:72:8E:CA:48:6F:FA:F2:92:EE:FA:A5:E4:9B:0C:CB&#xa;DirName:/C=US/ST=Illinois/L=Chicago/O=Zaphoyd Studios/OU=WebSocket++/CN=Peter Thorson/emailAddress=webmaster@zaphoyd.com&#xa;serial:CE:4C:B8:A2:5E:CD:7A:B4&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2011-11-15T21:20:06</elem>
+<elem key="notAfter">2012-11-14T21:20:06</elem>
+</table>
+<elem key="md5">fe4923f52b506c585d190c0d0176daa7</elem>
+<elem key="sha1">8c442ddfd5945b22204c17d0375aa8ef6956ce8d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIE0DCCA7igAwIBAgIJAM5MuKJezXq0MA0GCSqGSIb3DQEBBQUAMIGgMQswCQYD&#xa;VQQGEwJVUzERMA8GA1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28xGDAW&#xa;BgNVBAoTD1phcGhveWQgU3R1ZGlvczEUMBIGA1UECxMLV2ViU29ja2V0KysxFjAU&#xa;BgNVBAMTDVBldGVyIFRob3Jzb24xJDAiBgkqhkiG9w0BCQEWFXdlYm1hc3RlckB6&#xa;YXBob3lkLmNvbTAeFw0xMTExMTUyMTIwMDZaFw0xMjExMTQyMTIwMDZaMIGgMQsw&#xa;CQYDVQQGEwJVUzERMA8GA1UECBMISWxsaW5vaXMxEDAOBgNVBAcTB0NoaWNhZ28x&#xa;GDAWBgNVBAoTD1phcGhveWQgU3R1ZGlvczEUMBIGA1UECxMLV2ViU29ja2V0Kysx&#xa;FjAUBgNVBAMTDVBldGVyIFRob3Jzb24xJDAiBgkqhkiG9w0BCQEWFXdlYm1hc3Rl&#xa;ckB6YXBob3lkLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANR0&#xa;tdwAnIB8I9qRZ7QbzEWY95RpM7GIn0u/9oH90PzdHiE0rXSkKT+yw3XUzH0iw5t0&#xa;5dEwSC+srSP5Vm4cA6kXc94agVVaPW89tGcdP4fHptCruSrzQsDXELCPl5UUvMpA&#xa;YUcGisdXYPN/EeOoqb9wKWxoW5mREsyyeWWS89fYN5qU/d0QpbSvEWghqLbL/ZS2&#xa;hOlXT9LufOeA+vHiV1/T/h5xC7ecIH02YDQw1EnqxbPmkLPcWThztLS9FiufNDRM&#xa;Rhcoaj2b9VDHvDwdbeA0T5v5qNdG34LaapYOelxzQMOtM0f9Dgqehodyxl2qm9mR&#xa;lq432dlOEzDnVCPNHwECAwEAAaOCAQkwggEFMB0GA1UdDgQWBBTTPKfNMnKOykhv&#xa;+vKS7vql5JsMyzCB1QYDVR0jBIHNMIHKgBTTPKfNMnKOykhv+vKS7vql5JsMy6GB&#xa;pqSBozCBoDELMAkGA1UEBhMCVVMxETAPBgNVBAgTCElsbGlub2lzMRAwDgYDVQQH&#xa;EwdDaGljYWdvMRgwFgYDVQQKEw9aYXBob3lkIFN0dWRpb3MxFDASBgNVBAsTC1dl&#xa;YlNvY2tldCsrMRYwFAYDVQQDEw1QZXRlciBUaG9yc29uMSQwIgYJKoZIhvcNAQkB&#xa;FhV3ZWJtYXN0ZXJAemFwaG95ZC5jb22CCQDOTLiiXs16tDAMBgNVHRMEBTADAQH/&#xa;MA0GCSqGSIb3DQEBBQUAA4IBAQB+SH0s/hrv5VYqgX6SNLzxdSLvCVsUkCdTpxwY&#xa;wOJ84XmYcXDMhKDtZqLtOtN6pfEwVusFlC9mkieuunztCnWNmsSG83RuljJPjFSi&#xa;1d4Id4bKEQkQ4cfnjoHKivRrViWLnxuNnLzC6tpyGH/35kKWhhr6T58AXerFgVw3&#xa;mHvLPTr1DuhdAZA0ZuvuseVAFFAjI3RetSySwHJE3ak8KswDVfLi6E3XxMVsIWTS&#xa;/iFsC2WwoZQlljya2V/kRYIhu+uCdqJ01wunn2BvmURPSgr4GTBF0FQ9JGpNbXxM&#xa;TAU7oQJgyFc5sCcuEgPTO0dWVQTvdZVgay4tkmduKDRkmJBF&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="9013"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="websocket" product="WebSocket++" version="0.8.1" method="probed" conf="10"><cpe>cpe:/a:zaphoyd:websocketpp:0.8.1</cpe></service></port>
+<port protocol="tcp" portid="27036"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="steam" product="Valve Steam In-Home Streaming service" extrainfo="TLSv1.2 PSK" tunnel="ssl" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+<port protocol="tcp" portid="57623"><state state="open" reason="syn-ack" reason_ttl="128"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="7680"/>
+<osmatch name="Microsoft Windows XP SP3" accuracy="92" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="92"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="AVtech Room Alert 26W environmental monitor" accuracy="87" line="9134">
+<osclass type="specialized" vendor="AVtech" osfamily="embedded" accuracy="87"/>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2" accuracy="87" line="81598">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="87"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="86" line="27738">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="86"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 10.3-STABLE" accuracy="85" line="26098">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="10.X" accuracy="85"><cpe>cpe:/o:freebsd:freebsd:10.3</cpe></osclass>
+</osmatch>
+</os>
+<distance value="1"/>
+<tcpsequence index="262" difficulty="Good luck!" values="A386B71B,10EEB6A3,A0F0DB36,4F1BD860,40143CB5,1951697E"/>
+<ipidsequence class="Incremental" values="CF39,CF3A,CF3B,CF3C,CF3D,CF3E"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.8.1" rtt="2.71"/>
+</trace>
+<times srtt="2707" rttvar="2576" to="100000"/>
+</host>
+<host starttime="1636379555" endtime="1636379754"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.2" addrtype="ipv4"/>
+<address addr="00:50:56:ED:F4:00" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="reset" count="65534" proto="tcp" ports="1-52,54-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="53"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<osmatch name="VMware Player virtual NAT device" accuracy="90" line="104482">
+<osclass type="specialized" vendor="VMware" osfamily="Player" accuracy="90"><cpe>cpe:/a:vmware:player</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012" accuracy="88" line="85385">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="88"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="88" line="85072">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+</os>
+<distance value="1"/>
+<tcpsequence index="243" difficulty="Good luck!" values="66A82BF1,20764BF9,6BAD2D86,2E0C1F7A,629E419D,1F4B7A70"/>
+<ipidsequence class="Randomized" values="C661,ECB2,FEF,368B,5E30,871D"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.8.2" rtt="4.88"/>
+</trace>
+<times srtt="4884" rttvar="2943" to="100000"/>
+</host>
+<host starttime="1636379555" endtime="1636379754"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.133" addrtype="ipv4"/>
+<address addr="00:0C:29:07:CC:2E" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="reset" count="65533" proto="tcp" ports="1-21,23-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="8.4p1 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 29:4b:1f:dd:7b:f8:71:c5:a4:74:91:8a:81:db:78:f8 (RSA)&#xa;  256 b6:c6:fe:32:a7:75:1f:4e:a3:1a:ed:80:c6:0d:c4:6a (ECDSA)&#xa;  256 c9:54:ff:5b:e7:de:4e:70:88:53:fd:74:cf:38:c4:3b (ED25519)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQCc+l3SQbcHtH8PzV3rACyBs46C9U1jaivcT0zf0cOrrs3y0Xo/IVRnWeTxlhayodpMYk3uMn+Cwh6atIhA5IaS/PElD+vz6tYJh/MnjdDsDjYK05zEWyCLklHqWDqnxkT3Xkqg2+X1pMMq3Qep6X6+RpZ0HO+B1VHBTzclwlEbZZMHYeQJCmU7xitdlZF2t4F7BLVXNR5/F9mWUhsWm0tYYSBsa8Av/SfkXIZqJCeGF5IcuriN+4WJoBnAGGYtj5xYV1Uyt0OJD0TWNmZdtZQPeSzyja5aoPrEkVv+1iLk7zvj30KwLORGSCZYM+Ft6l8RiOuX3itOPVXx3dwB+eJ2fY1GHySmFvKMvLoEEbT/W/lrYGA44zPJHt7h8+S9uSe0lgIWNGTCiwq8dpAF3t891jU99HyzrclSeRFDmNxG5arH77HHKcf4o1AuhUzyVuf09XEno5XOwvT1MjieEyjAW02QxrTXo24Bs0MMyjjXUguEar4B7fo8F+ReYvwe8QE=</elem>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">294b1fdd7bf871c5a474918a81db78f8</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ5phHtYTr/2/7QITZ02K2c0yYeoeucsbF9syie0dSn/+Ks1PYhkJR9MUIUksJWlWUmks1EP8W+Y7dRw/XMMrYM=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">b6c6fe32a7751f4ea31aed80c60dc46a</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIG0LDsCe+exiPGQtjMqBCTo/+CXhQuE3apbzeTI/QUEN</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">c954ff5be7de4e708853fd74cf38c43b</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.48" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.48</cpe></service><script id="http-server-header" output="Apache/2.4.48 (Debian)"><elem>Apache/2.4.48 (Debian)</elem>
+</script><script id="http-title" output="Apache2 Debian Default Page: It works"><elem key="title">Apache2 Debian Default Page: It works</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<osmatch name="Linux 4.15 - 5.6" accuracy="100" line="67241">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2717038" lastboot="Fri Oct  8 11:11:56 2021"/>
+<distance value="1"/>
+<tcpsequence index="260" difficulty="Good luck!" values="7E7A2DA1,126226D4,F421F709,92E7ADF,ED818CD4,DF75B5CB"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="A1F2877A,A1F287E0,A1F28844,A1F288A9,A1F2890D,A1F28972"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.8.133" rtt="0.28"/>
+</trace>
+<times srtt="276" rttvar="87" to="100000"/>
+</host>
+<host starttime="1636379555" endtime="1636379754"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.8.254" addrtype="ipv4"/>
+<address addr="00:50:56:F4:C1:C7" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65535">
+<extrareasons reason="no-response" count="65535" proto="tcp" ports="1-65535"/>
+</extraports>
+</ports>
+<os></os>
+<distance value="1"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.8.254" rtt="0.14"/>
+</trace>
+<times srtt="139" rttvar="2133" to="100000"/>
+</host>
+<host starttime="1636379754" endtime="1636379766"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.8.129" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="reset" count="65534" proto="tcp" ports="1-8500,8502-65535"/>
+</extraports>
+<port protocol="tcp" portid="8501"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tornado httpd" version="6.1" method="probed" conf="10"><cpe>cpe:/a:tornadoweb:tornado:6.1</cpe></service><script id="http-title" output="Streamlit"><elem key="title">Streamlit</elem>
+</script><script id="http-server-header" output="TornadoServer/6.1"><elem>TornadoServer/6.1</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="8501"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41476"/>
+<osmatch name="Linux 2.6.32" accuracy="100" line="55736">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="43254" lastboot="Mon Nov  8 09:55:12 2021"/>
+<distance value="0"/>
+<tcpsequence index="259" difficulty="Good luck!" values="15FDD418,61E7C9F8,20D9AB7B,44F7CAA5,1967627C,9470BF86"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="293FB4C,293FBB0,293FC14,293FC79,293FCDD,293FD41"/>
+<times srtt="52" rttvar="14" to="100000"/>
+</host>
+<runstats><finished time="1636379766" timestr="Mon Nov  8 21:56:06 2021" summary="Nmap done at Mon Nov  8 21:56:06 2021; 256 IP addresses (5 hosts up) scanned in 212.51 seconds" elapsed="212.51" exit="success"/><hosts up="5" down="251" total="256"/>
+</runstats>
+</nmaprun>

@@ -1,4 +1,4 @@
-logs/*
+*.pcap
 attacks/hydra.restore
 app/__pycache__
 app/env

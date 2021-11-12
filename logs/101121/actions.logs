@@ -1,0 +1,43 @@
+Wed Nov 10 03:36:20 PM +08 2021
+Silent nmap scan conducted on 192.168.8.133
+Details saved in logs/101121/192.168.8.133/scans
+
+Wed Nov 10 03:36:50 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/101121/192.168.8.0_24/scans
+
+Wed Nov 10 03:37:42 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/101121/192.168.8.0_24/scans
+
+Wed Nov 10 03:46:49 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.133
+Details saved in logs/101121/192.168.8.133/scans
+
+Wed Nov 10 03:48:18 PM +08 2021
+SSH brute force attack conducted on 192.168.8.133
+Credentials used:
+username: osboxes
+password: osboxes.org
+Details saved in logs/101121/192.168.8.133/attacks/brute_force_SSH.txt
+
+Wed Nov 10 04:46:36 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.0/24
+Details saved in logs/101121/192.168.8.0_24/scans
+
+Wed Nov 10 07:54:22 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.133
+Details saved in logs/101121/192.168.8.133/scans
+
+Wed Nov 10 08:10:24 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.0/24
+Details saved in logs/101121/192.168.8.0_24/scans
+
+Wed Nov 10 09:31:08 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.133
+Details saved in logs/101121/192.168.8.133/scans
+
+Wed Nov 10 09:46:55 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/101121/192.168.8.0_24/scans
+

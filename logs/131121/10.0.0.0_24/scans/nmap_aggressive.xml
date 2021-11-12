@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Nov 13 01:06:16 2021 as: nmap -A -Pn -p- -oA ../logs/131121/10.0.0.0_24/scans/nmap_aggressive 10.0.0.0/24 -->
+<nmaprun scanner="nmap" args="nmap -A -Pn -p- -oA ../logs/131121/10.0.0.0_24/scans/nmap_aggressive 10.0.0.0/24" start="1636736776" startstr="Sat Nov 13 01:06:16 2021" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.1" addrtype="ipv4"/>
+<address addr="00:0C:29:69:1F:F9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.11" addrtype="ipv4"/>
+<address addr="00:0C:29:0F:8F:97" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.102" addrtype="ipv4"/>
+<address addr="00:0C:29:AE:A2:C2" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.101" addrtype="ipv4"/>
+<address addr="00:0C:29:88:A5:5D" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.12" addrtype="ipv4"/>
+<address addr="00:0C:29:14:A6:8B" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskprogress task="Service scan" time="1636736996" percent="96.55" remaining="3" etc="1636736998"/>
+<taskprogress task="Service scan" time="1636737064" percent="96.55" remaining="5" etc="1636737069"/>
+<host starttime="1636736792" endtime="1636737143"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.1" addrtype="ipv4"/>
+<address addr="00:0C:29:69:1F:F9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65513">
+<extrareasons reason="no-response" count="65513" proto="tcp" ports="1-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-5984,5986-9388,9390-49665,49668,49671,49673-49674,49676-49684,49686-49693,49695-60623,60625-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2021-11-08 22:38:33Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: poimgs.local, Site: Default-First-Site-Name" hostname="DC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" product="Windows Server 2016 Standard Evaluation 14393 microsoft-ds" extrainfo="workgroup: POIMGS" hostname="DC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: poimgs.local, Site: Default-First-Site-Name" hostname="DC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49672"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49675"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49685"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49694"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60624"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="53"/>
+<osmatch name="Microsoft Windows Server 2016" accuracy="100" line="76198">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="100"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="111233" lastboot="Thu Nov 11 18:18:30 2021"/>
+<distance value="1"/>
+<tcpsequence index="257" difficulty="Good luck!" values="6BB377BF,8688E1A9,3DE5FC6E,9F8BFAF9,7C889039,ADFA8C1C"/>
+<ipidsequence class="Incremental" values="71DB,71DC,71DD,71DE,71E1,71E2"/>
+<tcptssequence class="1000HZ" values="6A08A93,6A08AF8,6A08B5C,6A08BC0,6A08C25,6A08C89"/>
+<hostscript><script id="nbstat" output="NetBIOS name: DC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:0c:29:69:1f:f9 (VMware)"/><script id="smb2-time" output="&#xa;  date: 2021-11-08T22:41:11&#xa;  start_date: 2021-10-17T08:13:10"><elem key="date">2021-11-08T22:41:11</elem>
+<elem key="start_date">2021-10-17T08:13:10</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard Evaluation 14393 (Windows Server 2016 Standard Evaluation 6.3)&#xa;  Computer name: DC&#xa;  NetBIOS computer name: DC\x00&#xa;  Domain name: poimgs.local&#xa;  Forest name: poimgs.local&#xa;  FQDN: DC.poimgs.local&#xa;  System time: 2021-11-09T06:41:10+08:00&#xa;"><elem key="os">Windows Server 2016 Standard Evaluation 14393</elem>
+<elem key="lanmanager">Windows Server 2016 Standard Evaluation 6.3</elem>
+<elem key="server">DC\x00</elem>
+<elem key="date">2021-11-09T06:41:10+08:00</elem>
+<elem key="fqdn">DC.poimgs.local</elem>
+<elem key="domain_dns">poimgs.local</elem>
+<elem key="forest_dns">poimgs.local</elem>
+<elem key="workgroup">POIMGS\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="clock-skew" output="mean: -3d21h10m30s, deviation: 4h37m07s, median: -3d18h30m31s"><elem key="mean">-335430</elem>
+<elem key="count">3</elem>
+<elem key="median">-325831</elem>
+<elem key="stddev">16627</elem>
+</script></hostscript><trace>
+<hop ttl="1" ipaddr="10.0.0.1" rtt="25.95"/>
+</trace>
+<times srtt="25948" rttvar="50936" to="229692"/>
+</host>
+<host starttime="1636736792" endtime="1636737143"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.11" addrtype="ipv4"/>
+<address addr="00:0C:29:0F:8F:97" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-response" count="65531" proto="tcp" ports="1-134,136-5039,5041-5984,5986-7679,7681-65535"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="5040"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pando-pub" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<osmatch name="Microsoft Windows XP SP3" accuracy="91" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="91"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="AVtech Room Alert 26W environmental monitor" accuracy="87" line="9134">
+<osclass type="specialized" vendor="AVtech" osfamily="embedded" accuracy="87"/>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2" accuracy="87" line="81598">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="87"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="86" line="27738">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="86"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 10.3-STABLE" accuracy="85" line="26098">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="10.X" accuracy="85"><cpe>cpe:/o:freebsd:freebsd:10.3</cpe></osclass>
+</osmatch>
+</os>
+<distance value="1"/>
+<tcpsequence index="256" difficulty="Good luck!" values="AFD644E6,D1622D6B,73692779,450A7715,A15089,511A9F42"/>
+<ipidsequence class="Incremental" values="D2EF,D2F0,D2F1,D2F2,D2F3,D2F4"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace>
+<hop ttl="1" ipaddr="10.0.0.11" rtt="27.77"/>
+</trace>
+<times srtt="27774" rttvar="33604" to="162190"/>
+</host>
+<host starttime="1636736792" endtime="1636737143"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.12" addrtype="ipv4"/>
+<address addr="00:0C:29:14:A6:8B" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65534" proto="tcp" ports="1-5984,5986-65535"/>
+</extraports>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="5985"/>
+<osmatch name="Microsoft Windows Server 2016" accuracy="100" line="76198">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="100"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="843" lastboot="Sat Nov 13 00:58:20 2021"/>
+<distance value="1"/>
+<tcpsequence index="260" difficulty="Good luck!" values="BAD9C01E,EE4435E4,A71B07FF,AF7150EA,15A21E6E,F50CDA5A"/>
+<ipidsequence class="Incremental" values="1EA4,1EA5,1EA6,1EA7,1EA8,1EA9"/>
+<tcptssequence class="1000HZ" values="C1FEA,C204E,C20B3,C2117,C217B,C21E0"/>
+<trace>
+<hop ttl="1" ipaddr="10.0.0.12" rtt="0.46"/>
+</trace>
+<times srtt="458" rttvar="132" to="100000"/>
+</host>
+<host starttime="1636736792" endtime="1636737143"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.101" addrtype="ipv4"/>
+<address addr="00:0C:29:88:A5:5D" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="reset" count="65533" proto="tcp" ports="1-5043,5045-5600,5602-65535"/>
+</extraports>
+<port protocol="tcp" portid="5044"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="lxi-evntsvc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5601"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="esmagent" servicefp="SF-Port5601-TCP:V=7.92%I=7%D=11/13%Time=618E9FBB%P=x86_64-pc-linux-gnu%r(GetRequest,167,&quot;HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/spaces/enter\r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-referrer-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig:\x20b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x200\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:09:14\x20GMT\r\nConnection:\x20close\r\n\r\n&quot;)%r(HTTPOptions,1BE,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig:\x20b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:09:14\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;statusCode\&quot;:404,\&quot;error\&quot;:\&quot;Not\x20Found\&quot;,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;)%r(RTSPRequest,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(RPCCheck,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSVersionBindReqTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(DNSStatusRequestTCP,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Help,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SSLSessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(TerminalServerCookie,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(TLSSessionReq,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(Kerberos,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(SMBProgNeg,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(X11Probe,1C,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n&quot;)%r(FourOhFourRequest,1BE,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x20no-referrer-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig:\x20b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length:\x2060\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:09:14\x20GMT\r\nConnection:\x20close\r\n\r\n{\&quot;statusCode\&quot;:404,\&quot;error\&quot;:\&quot;Not\x20Found\&quot;,\&quot;message\&quot;:\&quot;Not\x20Found\&quot;}&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: &#xa;    HTTP/1.1 400 Bad Request&#xa;  FourOhFourRequest, HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: no-referrer-when-downgrade&#xa;    kbn-name: elk&#xa;    kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 60&#xa;    Date: Fri, 12 Nov 2021 17:09:14 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}&#xa;  GetRequest: &#xa;    HTTP/1.1 302 Found&#xa;    location: /spaces/enter&#xa;    x-content-type-options: nosniff&#xa;    referrer-policy: no-referrer-when-downgrade&#xa;    kbn-name: elk&#xa;    kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 0&#xa;    Date: Fri, 12 Nov 2021 17:09:14 GMT&#xa;    Connection: close"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe">&#xa;    HTTP/1.1 400 Bad Request</elem>
+<elem key="FourOhFourRequest, HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    X-Content-Type-Options: nosniff&#xa;    Referrer-Policy: no-referrer-when-downgrade&#xa;    kbn-name: elk&#xa;    kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9&#xa;    content-type: application/json; charset=utf-8&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 60&#xa;    Date: Fri, 12 Nov 2021 17:09:14 GMT&#xa;    Connection: close&#xa;    {&quot;statusCode&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Not Found&quot;}</elem>
+<elem key="GetRequest">&#xa;    HTTP/1.1 302 Found&#xa;    location: /spaces/enter&#xa;    x-content-type-options: nosniff&#xa;    referrer-policy: no-referrer-when-downgrade&#xa;    kbn-name: elk&#xa;    kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9&#xa;    cache-control: private, no-cache, no-store, must-revalidate&#xa;    content-length: 0&#xa;    Date: Fri, 12 Nov 2021 17:09:14 GMT&#xa;    Connection: close</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="5044"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="36642"/>
+<osmatch name="Linux 4.15 - 5.6" accuracy="100" line="67241">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="630824" lastboot="Fri Nov  5 17:58:39 2021"/>
+<distance value="1"/>
+<tcpsequence index="256" difficulty="Good luck!" values="CB9B7613,3BEF3B2F,91612058,79F882B,9C2BF212,D5FEF402"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="2598DEF0,2598DF54,2598DFB9,2598E01D,2598E082,2598E0E6"/>
+<trace>
+<hop ttl="1" ipaddr="10.0.0.101" rtt="0.41"/>
+</trace>
+<times srtt="405" rttvar="121" to="100000"/>
+</host>
+<taskprogress task="SYN Stealth Scan" time="1636737265" percent="58.61" remaining="77" etc="1636737342"/>
+<host starttime="1636737156" endtime="1636737520"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.0.0.102" addrtype="ipv4"/>
+<address addr="00:0C:29:AE:A2:C2" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65525">
+<extrareasons reason="no-response" count="65359" proto="tcp" ports="1-20,23-53,55-79,81-112,114-134,136-138,140-382,384-442,444-513,515-702,704-1929,1931-2104,2106-2912,2914-3305,3307-3388,3390-4306,4308-5139,5141-5577,5579-6028,6030-6636,6638-6659,6661-7180,7182-7787,7789-8067,8069-8079,8081-8406,8408-8520,8522-9439,9441-10005,10007-10751,10753-10797,10799-10873,10875-11481,11483-11563,11565-12489,12491-12588,12590-12784,12786-12978,12980-13467,13469-14504,14506-14533,14535-14755,14757-14855,14857-15131,15133-16878,16880-17035,17037-17911,17913-18013,18015-19718,19720-19851,19853-20294,20296-20805,20807-21135,21137-21298,21300-21768,21770-21830,21832-22680,22682-22764,22766-22979,22981-23103,23105-23246,23248-24143,24145-24528,24530-25234,25236-25353,25355-25570,25572-26137,26139-26938,26940-28231,28233-28439,28441-28717,28719-28728,28730-28877,28879-28911,28913-29620,29622-29770,29772-30208,30210-30265,30267-30338,30340-30786,30788-32008,32010-32232,32234-32372,32374-32698,32700-32747,32749-32794,32796-33056,33058-33100,33102-33147,33149-33174,33176-33701,33703-33844,33846-33876,33878-34833,34835-35076,35078-35396,35398-36320,36322-36704,36706-37138,37140-37904,37906-38259,38261-38587,38589-39320,39322-40000,40006-40010,40012-40076,40078-40351,40353-40606,40608-40666,40668-40858,40860-41254,41256-41722,41724-41759,41761-42517,42519-43181,43183-43197,43199-44192,44194-44250,44252-44548,44550-45028,45030-45046,45048-45061,45063-45107,45109-45575,45577-46282,46284-46305,46307-46419,46421-46616,46618-47016,47018-47229,47231-47893,47895-48782,48784-49030,49032-49378,49380-49471,49473-50128,50130-50539,50541-50635,50637-50818,50820-51502,51504-51754,51756-52982,52984-53150,53152-53263,53265-53299,53301-53381,53383-54053,54055-54478,54480-54834,54836-55789,55791-56647,56649-56690,56692-57221,57223-57297,57299-57773,57775-58218,58220-58467,58469-58553,58555-59056,59058-59456,59458-59483,59485-60307,60309-60704,60706-61876,61878-62280,62282-62720,62722-63365,63367-64271,64273-64879,64881-65236,65238-65341,65343-65535"/>
+<extrareasons reason="host-prohibited" count="166" proto="tcp" ports="21,54,113,135,139,383,703,1930,2105,2913,3306,3389,4307,5140,5578,6029,6637,6660,7181,7788,8068,8080,8407,8521,9440,10006,10752,10798,10874,11482,11564,12490,12589,12785,12979,13468,14505,14534,14756,14856,15132,16879,17036,17912,18014,19719,19852,20295,20806,21136,21299,21769,21831,22681,22765,22980,23104,23247,24144,24529,25235,25354,25571,26138,26939,28232,28440,28718,28729,28878,28912,29621,29771,30209,30266,30339,30787,32009,32233,32373,32699,32748,32795,33057,33101,33148,33175,33702,33845,33877,34834,35077,35397,36321,36705,37139,37905,38260,38588,39321,40077,40352,40607,40667,40859,41255,41723,41760,42518,43182,43198,44193,44251,44549,45029,45047,45062,45108,45576,46283,46306,46420,46617,47017,47230,47894,48783,49031,49379,49472,50129,50540,50636,50819,51503,51755,52983,53151,53264,53300,53382,54054,54479,54835,55790,56648,56691,57222,57298,57774,58219,58468,58554,59057,59457,59484,60308,60705,61877,62281,62721,63366,64272,64880,65237,65342"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4p1 Debian 10+deb9u7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 6e:3e:3d:ac:a6:a5:a4:10:38:e1:a5:f4:f3:f1:ea:de (RSA)"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC/UPrVR5uXG+2cMZL6Ngubp4V6Ttt0a2laZrtfRjWLLjHCbwn7E4tZLYPkRRpCJoQaZY3n0siTC7d/wQBqrnZYkwtNIXz878pdKlMrwSZtlD5j8234JA1Xj8bK1IFkWFWVGG/TMmSz0U6TRoK9fU9+wjDk0MJMPnGzQkixeFKtCxIpW8a0mnQr/IDBdPAxUKLHrpRTdwqSgU0ownjtEaaHhlV/e+zq9Wa/rM6WRwjtglgU9y4ThB9Tp//f0TTkzFRJ832FV2R1RPqdARE10WVneu3rsBotgvP8LGMVjoCb08qQVKj5taSKzXnp/Csdp1YjVuFuJg0FlzrFQqLddDxL</elem>
+<elem key="fingerprint">6e3e3daca6a5a41038e1a5f4f3f1eade</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-title" output="Did not follow redirect to https://10.0.0.102/"><elem key="redirect_url">https://10.0.0.102/</elem>
+</script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="http-title" output=" AlienVault OSSIM&#xa;Requested resource was session/login.php"><elem key="title"> AlienVault OSSIM</elem>
+<elem key="redirect_url">session/login.php</elem>
+</script><script id="ssl-cert" output="Subject: commonName=alienvault&#xa;Subject Alternative Name: email:system@alienvault.com&#xa;Not valid before: 2021-10-28T11:55:46&#xa;Not valid after:  2031-10-26T11:55:46"><table key="subject">
+<elem key="commonName">alienvault</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">alienvault</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C7B18495D16919E7F9CAD4D3F55C5CFB8F82A69500A0218420D9EFFFEF7B52555FE978BBE049D8E064838F733398BCC2BE3E7998AE25EE2966A1D0EE4F97117E9512E52A1C9E65D32D7AE71A0CBC2EB0514186360A897F6225588E4DCAB96110E3EA5DE0C82A157F9894D8A8A461B654AF7CDE325CB57334A0AA72EB5EAEE72BAADC16BCFDD010DC7D5D017A24638E026F2E27C8231B43D7BD199AA96094ACD7621E704072D82161F3422189443244931CC2F0D0568371F4F9DFEC35F25E2EF26FA5B8040CB2AC6EBD45348A9BA9D73ACAD98971D1C08B1CBC9A050A48F7FDA35E88C3E7B4DD4212E1FD6B61CA4A5E45DDDFAAFAA04B2EF0639CCB4BD1C2EDDB</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">email:system@alienvault.com</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-10-28T11:55:46</elem>
+<elem key="notAfter">2031-10-26T11:55:46</elem>
+</table>
+<elem key="md5">ced40d888e1eb98fc045bf7b06d590db</elem>
+<elem key="sha1">b73199b3fe152f705c29157b528f99027db37b8d</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC3DCCAcSgAwIBAgIJAKSPucGOI0efMA0GCSqGSIb3DQEBCwUAMBUxEzARBgNV&#xa;BAMMCmFsaWVudmF1bHQwHhcNMjExMDI4MTE1NTQ2WhcNMzExMDI2MTE1NTQ2WjAV&#xa;MRMwEQYDVQQDDAphbGllbnZhdWx0MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB&#xa;CgKCAQEAx7GEldFpGef5ytTT9Vxc+4+CppUAoCGEINnv/+97UlVf6Xi74EnY4GSD&#xa;j3MzmLzCvj55mK4l7ilmodDuT5cRfpUS5SocnmXTLXrnGgy8LrBRQYY2Col/YiVY&#xa;jk3KuWEQ4+pd4MgqFX+YlNiopGG2VK983jJctXM0oKpy616u5yuq3Ba8/dAQ3H1d&#xa;AXokY44Cby4nyCMbQ9e9GZqpYJSs12IecEBy2CFh80IhiUQyRJMcwvDQVoNx9Pnf&#xa;7DXyXi7yb6W4BAyyrG69RTSKm6nXOsrZiXHRwIscvJoFCkj3/aNeiMPntN1CEuH9&#xa;a2HKSl5F3d+q+qBLLvBjnMtL0cLt2wIDAQABoy8wLTAJBgNVHRMEAjAAMCAGA1Ud&#xa;EQQZMBeBFXN5c3RlbUBhbGllbnZhdWx0LmNvbTANBgkqhkiG9w0BAQsFAAOCAQEA&#xa;DPx+5h7R+FxLNLq6hURiuJ6P7OYKPkJmKI9vBLA8hRYaN9TIXEGpmEruBcRfFW2T&#xa;wzppM9YYAknMwpwYTTFxWqufswp8DCjO9ryBGPWxa4S8Sb/Cd50m3X9Rl2QazNS9&#xa;r4tIWZczWUwhv3Dy5LugFlgFsWTTUge98xUl4facbn28bkSULH8Z0FluJ/AWGm/g&#xa;oK56RdFYdZLbt3tarSoSzU7VMyed2AECstiV/FJcumNbBG+/s5o64F7ZdcaQGQ3A&#xa;kG5Jjo5TnfeZhDiAbWI7vFDmCChHV5sqkwoOKwvP36gXheOLXKOLnMc7sYNNmM1g&#xa;Y2mYBpbF07JH0JFps7AqcQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+<port protocol="tcp" portid="514"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="shell" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40001"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40002"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40003"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40004"><state state="closed" reason="reset" reason_ttl="64"/></port>
+<port protocol="tcp" portid="40005"><state state="closed" reason="reset" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="tcp" portid="40011"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="ssl-cert" output="Subject: commonName=734a4d56-fe77-085c-d97d-9ab872aea2c2/organizationName=Security/stateOrProvinceName=CA/countryName=US&#xa;Not valid before: 2021-10-28T11:37:25&#xa;Not valid after:  2031-11-05T11:37:25"><table key="subject">
+<elem key="commonName">734a4d56-fe77-085c-d97d-9ab872aea2c2</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">root@localhost</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Security</elem>
+<elem key="organizationalUnitName">Security</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">734a4d56-fe77-085c-d97d-9ab872aea2c2</elem>
+<elem key="countryName">US</elem>
+<elem key="emailAddress">root@localhost</elem>
+<elem key="localityName">San Francisco</elem>
+<elem key="organizationName">Security</elem>
+<elem key="organizationalUnitName">Security</elem>
+<elem key="stateOrProvinceName">CA</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">CB803DEA3A1119295F63F2F18224D68F8C6D7CB4A20F63CBBA391F1515F11D19F89C4C9E7BDE4ED18A27D90016555A5F5F1F664FB24DE6D69E3DD5D6A0DF90689195F7E5728C902887DEEB2994E66804CD3CB1AC57650869D5A06CC206317C3DEDE7F8C35236F80F260237AAB156D77EA817C5C07D7CE661FF5D6C9AB7AD9C740DCB41AA4B793862FAE7C793857FFE3B77231EF799D4DF83711E53396D5AE12879053381EC7C07396F8D9624964AC312438C364BD26E6AA6AF616BAEAC031DF4BDE92E50738D906520E9D0EBE3CCE2AA570C212BACE3683A22AB090820E89625D2228CF2E65921E801F4D98AD44D89902027F9D3E832CFB29A7AF65E881C378BE2FD036499125D648A14DF9959671B7D25511F5219001FC56E55714E5509536F5790C348F88FC1230FD73073944A997E68B58C8A790496B184F168E605D8142313B595EAA4E9AE7C9B666C900B3AB9C49D29B28694A4405BFE0E4DC6CD852ADF423F1F37AB47C6BAAB4D5267D399B3E4C78652079A9748B9807268FB6A41B49E62995C24E66DF96FFBE40DCFE059F0426B7D57CAAB355C4677C7396B6D19C105D1734109FC1B09318FC3E586856E31E87E55BA40AFE5858FA7A8023C914A8FF36AB950FD0F620B28B8ECE2457BA48AA0F11236B76D777542302B2D2DC0D3CCAE97E3D013FAA0DA0CB381056C0415E56B3ECA34C1678A02A7A9B96DB6B54429CF</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+<table>
+<elem key="name">Netscape Comment</elem>
+<elem key="value">OpenSSL Generated Certificate</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">AF:1F:62:9C:69:E4:F1:77:8E:7B:16:93:16:C7:9B:33:DA:54:FF:76</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:DE:35:68:6D:FD:1E:81:80:B2:01:7F:F1:A8:5A:7F:4E:BA:24:DB:F3&#xa;</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-10-28T11:37:25</elem>
+<elem key="notAfter">2031-11-05T11:37:25</elem>
+</table>
+<elem key="md5">873b8c01b3b88eb6461b7af6c9efb851</elem>
+<elem key="sha1">bb8e3f1f1828917044debf77e73267fbc3c9dae9</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIGRTCCBC2gAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwgaYxCzAJBgNVBAYTAlVT&#xa;MQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzERMA8GA1UEChMI&#xa;U2VjdXJpdHkxLTArBgNVBAMTJDczNGE0ZDU2LWZlNzctMDg1Yy1kOTdkLTlhYjg3&#xa;MmFlYTJjMjEdMBsGCSqGSIb3DQEJARYOcm9vdEBsb2NhbGhvc3QxETAPBgNVBAsT&#xa;CFNlY3VyaXR5MB4XDTIxMTAyODExMzcyNVoXDTMxMTEwNTExMzcyNVowgaYxCzAJ&#xa;BgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzER&#xa;MA8GA1UECgwIU2VjdXJpdHkxETAPBgNVBAsMCFNlY3VyaXR5MS0wKwYDVQQDDCQ3&#xa;MzRhNGQ1Ni1mZTc3LTA4NWMtZDk3ZC05YWI4NzJhZWEyYzIxHTAbBgkqhkiG9w0B&#xa;CQEWDnJvb3RAbG9jYWxob3N0MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKC&#xa;AgEAy4A96joRGSlfY/LxgiTWj4xtfLSiD2PLujkfFRXxHRn4nEyee95O0Yon2QAW&#xa;VVpfXx9mT7JN5taePdXWoN+QaJGV9+VyjJAoh97rKZTmaATNPLGsV2UIadWgbMIG&#xa;MXw97ef4w1I2+A8mAjeqsVbXfqgXxcB9fOZh/11smretnHQNy0GqS3k4Yvrnx5OF&#xa;f/47dyMe95nU34NxHlM5bVrhKHkFM4HsfAc5b42WJJZKwxJDjDZL0m5qpq9ha66s&#xa;Ax30vekuUHONkGUg6dDr48ziqlcMISus42g6IqsJCCDoliXSIozy5lkh6AH02YrU&#xa;TYmQICf50+gyz7KaevZeiBw3i+L9A2SZEl1kihTfmVlnG30lUR9SGQAfxW5VcU5V&#xa;CVNvV5DDSPiPwSMP1zBzlEqZfmi1jIp5BJaxhPFo5gXYFCMTtZXqpOmufJtmbJAL&#xa;OrnEnSmyhpSkQFv+Dk3GzYUq30I/HzerR8a6q01SZ9OZs+THhlIHmpdIuYByaPtq&#xa;QbSeYplcJOZt+W/75A3P4FnwQmt9V8qrNVxGd8c5a20ZwQXRc0EJ/BsJMY/D5YaF&#xa;bjHoflW6QK/lhY+nqAI8kUqP82q5UP0PYgsouOziRXukiqDxEja3bXd1QjArLS3A&#xa;08yul+PQE/qg2gyzgQVsBBXlaz7KNMFnigKnqblttrVEKc8CAwEAAaN7MHkwCQYD&#xa;VR0TBAIwADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlm&#xa;aWNhdGUwHQYDVR0OBBYEFK8fYpxp5PF3jnsWkxbHmzPaVP92MB8GA1UdIwQYMBaA&#xa;FN41aG39HoGAsgF/8ahaf066JNvzMA0GCSqGSIb3DQEBCwUAA4ICAQB+eOJAi/BW&#xa;d+g+xD5kzevB/awRyFm60lDSj8t3CRL+ZvPdVz1Sylp63jDWS9D6+Tl0mgl+0Elt&#xa;VqVHvaQKH9LAcbhslz11Us4EAeNj9lc8BYYQdcS2Pv4y08q3R/l09GAqI5gBSiN/&#xa;s25ItpnST3rhBe6hEV37m/1CnMIx8Wzz6cqvtrM504gJB1zXw4IvMLRA4mnwn+fj&#xa;niTrYCpQ+FciHiuHeBjbHIzbkFrHwctKcGHlzD4zJSy8+ladl8slYZnWJWCDhYy5&#xa;UISZGKrGr+MQwcHNsAz0zaY53HhGkXhZI6UK7ZSF53l1X2q3v8xzJEoSSOt+wJVL&#xa;wqJZ12uZnWdqPbsHtPtwuRIQR75qNXnQdsMlj4Ll1OaT18apZNgWXiML5+lp8p3u&#xa;tW85SaYMNPpqlhnuYaqzTFT9Ktfp69Yr8dVhSTEorEPz8itKzdMPsnG7uH8bxUAL&#xa;fsEncCPf7CLe2OH6gbr9+GZt43usDcCCYEOubPM+EviMtmeBA5tmtjfWUSqJ69RE&#xa;JXgkaYK8Tw47zLMMDPKlL1fHZcSGdQtFkknu/hR8UjAyW9+na8kSk0ekJxZ799KQ&#xa;2Q2gBvJRV45Bf4zQq4BR8bY0iPsMwj/XdtCLjsy2e5YHofOJPPHa50g30dbfbBe1&#xa;6De3PwMsbmHKuyLF6BB3mgD5CzTV30tRUg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="http-title" output="500 Internal Server Error"><elem key="title">500 Internal Server Error</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="40004"/>
+<osmatch name="OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34)" accuracy="91" line="46781">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.4</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt White Russian 0.9 (Linux 2.4.30)" accuracy="91" line="46820">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.4.30</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt Kamikaze 7.09 (Linux 2.6.22)" accuracy="91" line="61527">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.22</cpe></osclass>
+</osmatch>
+<osmatch name="HP P2000 G3 NAS device" accuracy="91" line="35040">
+<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="91"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+</osmatch>
+<osmatch name="ProVision-ISR security DVR" accuracy="91" line="59769">
+<osclass type="media device" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.12 - 4.10" accuracy="90" line="63727">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="90" line="55548">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="88" line="64667">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt Kamikaze 8.09 (Linux 2.4.35.4)" accuracy="88" line="46039">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.4.35.4</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt Kamikaze 8.09 (Linux 2.6.25 - 2.6.26)" accuracy="88" line="47186">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="88"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+</os>
+<distance value="1"/>
+<tcpsequence index="264" difficulty="Good luck!" values="C0E4769F,BE1E1F7F,358399E0,97E4E0B7,85B22DC2,24399BCE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace>
+<hop ttl="1" ipaddr="10.0.0.102" rtt="0.32"/>
+</trace>
+<times srtt="319" rttvar="18" to="100000"/>
+</host>
+<host starttime="1636737520" endtime="1636737533"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.0.0.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="reset" count="65534" proto="tcp" ports="1-8500,8502-65535"/>
+</extraports>
+<port protocol="tcp" portid="8501"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tornado httpd" version="6.1" method="probed" conf="10"><cpe>cpe:/a:tornadoweb:tornado:6.1</cpe></service><script id="http-server-header" output="TornadoServer/6.1"><elem>TornadoServer/6.1</elem>
+</script><script id="http-title" output="Streamlit"><elem key="title">Streamlit</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="8501"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="38511"/>
+<osmatch name="Linux 2.6.32" accuracy="100" line="55736">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="3767" lastboot="Sat Nov 13 00:16:06 2021"/>
+<distance value="0"/>
+<tcpsequence index="262" difficulty="Good luck!" values="3D11DD2C,4A798856,F555C141,7DE811F5,63F1CCA8,8B6FD6BC"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="3972B7,39731C,397381,3973E6,39744A,3974AF"/>
+<times srtt="122" rttvar="103" to="100000"/>
+</host>
+<runstats><finished time="1636737533" timestr="Sat Nov 13 01:18:53 2021" summary="Nmap done at Sat Nov 13 01:18:53 2021; 256 IP addresses (6 hosts up) scanned in 757.13 seconds" elapsed="757.13" exit="success"/><hosts up="6" down="250" total="256"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,88 @@
+Tue Nov  9 03:43:32 PM +08 2021
+Silent nmap scan conducted on 192.168.8.133
+Details saved in logs/091121/192.168.8.133/scans
+
+Tue Nov  9 03:43:51 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.133
+Details saved in logs/091121/192.168.8.133/scans
+
+Tue Nov  9 03:44:38 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0/scans
+
+Tue Nov  9 03:45:10 PM +08 2021
+SSH brute force attack conducted on 192.168.8.133
+Credentials used:
+username list: top-usernames-shortlist.txt
+password list: 2020-200_most_used_passwords.txt
+Details saved in logs/091121/192.168.8.133/attacks/brute_force_SSH.txt
+
+Tue Nov  9 03:45:39 PM +08 2021
+Man in the Middle attack conducted on 192.168.8.133
+Routed from router IP address 192.168.8.1
+pcap file saved in logs/091121/192.168.8.133/attacks/MitM.pcap
+
+Tue Nov  9 04:57:44 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0(24)/scans
+
+Tue Nov  9 04:58:03 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/()/scans
+
+Tue Nov  9 05:07:21 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:07:29 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121//scans
+
+Tue Nov  9 05:10:32 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121//scans
+
+Tue Nov  9 05:11:55 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121//scans
+
+Tue Nov  9 05:12:36 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:13:32 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:13:41 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:14:13 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:14:32 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:15:51 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/24/scans
+
+Tue Nov  9 05:16:50 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0_24/scans
+
+Tue Nov  9 05:17:43 PM +08 2021
+Silent nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0_24/scans
+
+Tue Nov  9 05:17:53 PM +08 2021
+mass scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0_24/scans
+
+Tue Nov  9 10:54:17 PM +08 2021
+Aggressive nmap scan conducted on 192.168.8.0/24
+Details saved in logs/091121/192.168.8.0_24/scans
+
