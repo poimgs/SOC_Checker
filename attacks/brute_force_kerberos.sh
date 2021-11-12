@@ -59,7 +59,11 @@ SAVE_PATH="../logs/$TODAY/$IP/attacks/brute_force_kerberos.txt"
 # Parse user_file to only get txt file and not full path
 user_file_parsed=$(echo $user_file | awk -F/ '{print $NF}')
 
-# Log brute force kerberos attack
+# Log brute force kerberos attack at save path
+echo $DATETIME >> $SAVE_PATH
+echo "username list: $user_file_parsed" >> $SAVE_PATH
+
+# Log brute force kerberos attack at centralised log
 echo "$DATETIME" >> $LOG_PATH
 echo "Kerberos brute force attack conducted on $IP" >> $LOG_PATH
 echo "username list used: $user_file_parsed" >> $LOG_PATH
@@ -80,5 +84,8 @@ msfconsole -r kerberos_enum.rc
 
 # Remove rc file 
 rm kerberos_enum.rc
+
+# Add a space to end of save path to split attacks by new line
+echo "" >> $SAVE_PATH
 
 echo "[*] Results have been saved in logs/$IP/attacks/brute_force_kerberos.txt"
