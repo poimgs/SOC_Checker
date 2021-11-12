@@ -5,7 +5,7 @@ import os
 import helper
 
 # Path to logs
-LOGS_PATH = os.path.join("logs")
+LOGS_PATH = os.path.join("app", "logs")
 
 def get_targets(log_date_path: str) -> list:
 	"""Checks for ip patterns in directory path and retuns all ip patterns"""
