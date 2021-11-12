@@ -265,6 +265,10 @@ def parse_attacks_logs(path_to_attacks: str) -> dict:
 			# Group new set of credentials information when new command is ran
 			if start_of_new_hydra_attack_pattern.match(line):
 
+				# Before re-initialising grouped log, append current grouped log to list of logs
+				if index > 0:
+					logs.append(grouped_log)
+
 				# Get relevant information from line
 				splitted_line = line.split()
 				time = splitted_line[6]
@@ -301,11 +305,7 @@ def parse_attacks_logs(path_to_attacks: str) -> dict:
 					password_list = matched.split("/")[-1]
 					grouped_log["password_list"] = password_list
 
-				# If it's the first iteration, no information will be in grouped_log, so don't append to list
-				if index > 0:
-					logs.append(grouped_log)
-
-				# Unless there is only one line, which means the command ran, with no credentials brute forced
+				# If there is only line, it means that it was ran one time, with no credentials found, so append it to list of logs
 				if len(lines) == 1:
 					logs.append(grouped_log)
 
