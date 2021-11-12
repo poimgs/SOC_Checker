@@ -154,21 +154,30 @@ def network_analysis(log_date_path: str, ip: str) -> None:
 	info_left_col, info_right_col = st.columns(2)
 
 	# Get port information for each host
+
+	# Sort host_df to improve readability on strealit when outputted
+	host_df = host_df.sort_values(by=["os_name", "ip"])
+
 	if selected_OS == "All":
 		selected_OS_ip_list = host_df["ip"].values
+		selected_OS_type_list = host_df["os_name"].values
 	else:
 		selected_OS_ip_list = host_df[host_df["os_name"] == selected_OS]["ip"].values
+		selected_OS_type_list = host_df[host_df["os_name"] == selected_OS]["os_name"].values
 
 	# Create and output string for port information for IP focused information
 	ip_focused_info = "### IP-focused information  \n\n"
 
-	for ip in selected_OS_ip_list:
+	for ip, OS_type in zip(selected_OS_ip_list, selected_OS_type_list):
 		ports_info = port_df[port_df["ip"] == ip][["number", "service", "transport_protocol"]]
 		ports_number_list = ports_info["number"].values 
 		service_number_list = ports_info["service"].values
 		transport_protocol_list = ports_info["transport_protocol"].values
 
-		ip_focused_info += f"**{ip}**  \n\n"
+		if OS_type is not None:
+			ip_focused_info += f"**{ip} ({OS_type.title()})**  \n\n"
+		else:
+			ip_focused_info += f"**{ip}**  \n\n"
 		
 		for port, service, transport_protocol in zip(ports_number_list, service_number_list, transport_protocol_list):
 			if service is not None:
