@@ -52,7 +52,7 @@ def header() -> None:
 # SELECTOR COMPONENTS
 def date_selector() -> None:
 	"""Simple date selector to allow user to choose date of logs to analyse"""
-	date = st.date_input("Date Selector")
+	date = st.date_input("Date Selector", value=datetime.fromisoformat("2021-11-13"))
 	return date
 
 def target_picker(log_date_path: Union[str,None], date: datetime) -> str:
@@ -60,6 +60,11 @@ def target_picker(log_date_path: Union[str,None], date: datetime) -> str:
 
 	# if date cannot be found, return an error message
 	if log_date_path is None:
+		st.info(f"""
+Since you are viewing the app at share.streamlit.io, you will only be able to view sample logs.  \n
+Please note that you will only be able to view logs for 13/11/21. 
+""")
+
 		st.warning(f"""
 We could not find any logs for the date of {date}  \n
 Please select another date.
