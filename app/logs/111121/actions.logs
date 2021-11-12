@@ -1,0 +1,21 @@
+Thu Nov 11 10:49:44 PM +08 2021
+SSH brute force attack conducted on 192.168.8.133
+Credentials used:
+username list: top-usernames-shortlist.txt
+password list: 2020-200_most_used_passwords.txt
+Details saved in logs/111121/192.168.8.133/attacks/brute_force_SSH.txt
+
+Thu Nov 11 10:50:45 PM +08 2021
+SSH brute force attack conducted on 192.168.8.133
+Credentials used:
+username: osboxes
+password: osboxes.org
+Details saved in logs/111121/192.168.8.133/attacks/brute_force_SSH.txt
+
+Thu Nov 11 10:51:20 PM +08 2021
+SSH brute force attack conducted on 192.168.8.133
+Credentials used:
+username list: top-usernames-shortlist.txt
+password list: 2020-200_most_used_passwords.txt
+Details saved in logs/111121/192.168.8.133/attacks/brute_force_SSH.txt
+

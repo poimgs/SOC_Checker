@@ -3,7 +3,7 @@ from typing import Union
 import os
 
 # Path to logs
-LOGS_PATH = os.path.join("..", "logs")
+LOGS_PATH = os.path.join("logs")
 
 def date_exists(date: datetime) -> Union[str,None]:
 	"""Checks if date exists in logs folder"""

@@ -1,0 +1,81 @@
+# Nmap 7.92 scan initiated Sat Nov 13 01:06:04 2021 as: nmap -A -Pn -p- -oA ../logs/131121/10.0.0.101/scans/nmap_aggressive 10.0.0.101
+Nmap scan report for 10.0.0.101
+Host is up (0.00091s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+5044/tcp open  lxi-evntsvc?
+5601/tcp open  esmagent?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, Kerberos, RPCCheck, RTSPRequest, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServerCookie, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|   FourOhFourRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     X-Content-Type-Options: nosniff
+|     Referrer-Policy: no-referrer-when-downgrade
+|     kbn-name: elk
+|     kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9
+|     content-type: application/json; charset=utf-8
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 60
+|     Date: Fri, 12 Nov 2021 17:06:32 GMT
+|     Connection: close
+|     {"statusCode":404,"error":"Not Found","message":"Not Found"}
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     location: /spaces/enter
+|     x-content-type-options: nosniff
+|     referrer-policy: no-referrer-when-downgrade
+|     kbn-name: elk
+|     kbn-license-sig: b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9
+|     cache-control: private, no-cache, no-store, must-revalidate
+|     content-length: 0
+|     Date: Fri, 12 Nov 2021 17:06:32 GMT
+|_    Connection: close
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5601-TCP:V=7.92%I=7%D=11/13%Time=618E9F19%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,167,"HTTP/1\.1\x20302\x20Found\r\nlocation:\x20/spaces/enter\
+SF:r\nx-content-type-options:\x20nosniff\r\nreferrer-policy:\x20no-referre
+SF:r-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig:\x20b61601d818a
+SF:0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r\ncache-control:
+SF:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-le
+SF:ngth:\x200\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:06:32\x20GMT\r\n
+SF:Connection:\x20close\r\n\r\n")%r(HTTPOptions,1BE,"HTTP/1\.1\x20404\x20N
+SF:ot\x20Found\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Policy:\x
+SF:20no-referrer-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig:\x2
+SF:0b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r\nco
+SF:ntent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:\x20
+SF:private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-length
+SF::\x2060\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:06:32\x20GMT\r\nCon
+SF:nection:\x20close\r\n\r\n{\"statusCode\":404,\"error\":\"Not\x20Found\"
+SF:,\"message\":\"Not\x20Found\"}")%r(RTSPRequest,1C,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\n\r\n")%r(RPCCheck,1C,"HTTP/1\.1\x20400\x20Bad\x20Requ
+SF:est\r\n\r\n")%r(DNSVersionBindReqTCP,1C,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\n\r\n")%r(DNSStatusRequestTCP,1C,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\n\r\n")%r(Help,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%
+SF:r(SSLSessionReq,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(Term
+SF:inalServerCookie,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(TLS
+SF:SessionReq,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(Kerberos,
+SF:1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(SMBProgNeg,1C,"HTTP/
+SF:1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(X11Probe,1C,"HTTP/1\.1\x20400
+SF:\x20Bad\x20Request\r\n\r\n")%r(FourOhFourRequest,1BE,"HTTP/1\.1\x20404\
+SF:x20Not\x20Found\r\nX-Content-Type-Options:\x20nosniff\r\nReferrer-Polic
+SF:y:\x20no-referrer-when-downgrade\r\nkbn-name:\x20elk\r\nkbn-license-sig
+SF::\x20b61601d818a0d4810dae0a0fa09ad440ca30ec8a87d6d4b4cdb6c042763cc4d9\r
+SF:\ncontent-type:\x20application/json;\x20charset=utf-8\r\ncache-control:
+SF:\x20private,\x20no-cache,\x20no-store,\x20must-revalidate\r\ncontent-le
+SF:ngth:\x2060\r\nDate:\x20Fri,\x2012\x20Nov\x202021\x2017:06:32\x20GMT\r\
+SF:nConnection:\x20close\r\n\r\n{\"statusCode\":404,\"error\":\"Not\x20Fou
+SF:nd\",\"message\":\"Not\x20Found\"}");
+MAC Address: 00:0C:29:88:A5:5D (VMware)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.6
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.91 ms 10.0.0.101
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 13 01:06:35 2021 -- 1 IP address (1 host up) scanned in 31.16 seconds

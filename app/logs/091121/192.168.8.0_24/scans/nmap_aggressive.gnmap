@@ -1,0 +1,12 @@
+# Nmap 7.92 scan initiated Tue Nov  9 22:54:17 2021 as: nmap -A -Pn -p- -oA ../logs/091121/192.168.8.0_24/scans/nmap_aggressive 192.168.8.0/24
+Host: 192.168.8.1 ()	Status: Up
+Host: 192.168.8.1 ()	Ports: 7680/open/tcp//pando-pub?///, 9012/open/tcp//ssl|websocket//WebSocket++ 0.8.1/, 9013/open/tcp//websocket//WebSocket++ 0.8.1/, 27036/open/tcp//ssl|steam//Valve Steam In-Home Streaming service (TLSv1.2 PSK)/, 49669/open/tcp/////, 49670/open/tcp/////, 57623/open/tcp/////	Ignored State: filtered (65528)	Seq Index: 259	IP ID Seq: Incremental
+Host: 192.168.8.2 ()	Status: Up
+Host: 192.168.8.2 ()	Ports: 53/open/tcp//tcpwrapped///	Ignored State: closed (65534)	OS: VMware Player virtual NAT device	Seq Index: 248	IP ID Seq: Incremental
+Host: 192.168.8.133 ()	Status: Up
+Host: 192.168.8.133 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.4p1 Debian 5 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.48 ((Debian))/	Ignored State: closed (65533)	OS: Linux 4.15 - 5.6	Seq Index: 257	IP ID Seq: All zeros
+Host: 192.168.8.254 ()	Status: Up
+Host: 192.168.8.254 ()	Ports: 	Ignored State: filtered (65535)
+Host: 192.168.8.129 ()	Status: Up
+Host: 192.168.8.129 ()	Ports: 8501/open/tcp//http//Tornado httpd 6.1/	Ignored State: closed (65534)	OS: Linux 2.6.32	Seq Index: 259	IP ID Seq: All zeros
+# Nmap done at Tue Nov  9 22:57:46 2021 -- 256 IP addresses (5 hosts up) scanned in 208.53 seconds
