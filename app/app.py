@@ -4,6 +4,11 @@ import process_data
 import helper
 
 def main():
+	# Understanding file structure in streamlit sharing
+	print(os.getcwd())
+	print(os.listdir())
+	
+	
 	components.config()
 	components.side_bar()
 	components.header()
