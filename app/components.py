@@ -27,18 +27,20 @@ def horizontal_line() -> None:
 def side_bar() -> None:
 	"""Side bar component to show guide to use SOChecker.sh"""
 	st.sidebar.write("# Guide to use SOChecker")
-	st.sidebar.write("On your terminal in the project's root directory:")
 
 	st.sidebar.write("**Install required dependencies**  ")
 	st.sidebar.code("sudo bash SOChecker.sh install  ")
 
-	st.sidebar.write("**Scan a network (CIDR format) or an IP address**  ")
+	st.sidebar.write("**Scan a network or an IP address**  ")
 	st.sidebar.code("sudo bash SOChecker.sh scan")
 
 	st.sidebar.write("**Conduct an attack on a target IP address**  ")
 	st.sidebar.code("sudo bash SOChecker.sh attack")
 
-	st.sidebar.write("# How the Web Application works")
+	st.sidebar.write("**Analyse logs**")
+	st.sidebar.code("sudo bash SOChcker.sh analyse")
+
+	st.sidebar.write("# How this web app work")
 	st.sidebar.write("- Any scan and attack you conduct will be saved in the logs folder")
 	st.sidebar.write("- This web app uses your logs to populate information")
 	st.sidebar.write("- The more you use SOChecker.sh, the more information you get to play with!")
