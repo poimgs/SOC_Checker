@@ -16,33 +16,39 @@ check_programs() {
 	uninstalled_programs=()
 
 	# Check for nmap
-	if ! [ -x "$(command -v nmap)" ]; then
+	if ! [[ -x "$(command -v nmap)" ]]; then
 		uninstalled_programs+=( "nmap" )
 	fi
 
 	# Check for masscan
-	if ! [ -x "$(command -v masscan)" ]; then
+	if ! [[ -x "$(command -v masscan)" ]]; then
 		uninstalled_programs+=( "masscan" )
 	fi
 
 	# Check for hydra
-	if ! [ -x "$(command -v hydra)" ]; then
+	if ! [[ -x "$(command -v hydra)" ]]; then
 		uninstalled_programs+=( "hydra" )
 	fi
 
 	# Check for msfconsole
-	if ! [ -x "$(command -v msfconsole)" ]; then
+	if ! [[ -x "$(command -v msfconsole)" ]]; then
 		uninstalled_programs+=( "metasploit-framework" )
 	fi
 
 	# Check for arpspoof
-	if ! [ -x "$(command -v arpspoof)" ]; then
+	if ! [[ -x "$(command -v arpspoof)" ]]; then
 		uninstalled_programs+=( "dsniff" )
 	fi
 
 	# Check for tshark
-	if ! [ -x "$(command -v arpspoof)" ]; then
+	if ! [[ -x "$(command -v arpspoof)" ]]; then
 		uninstalled_programs+=( "tshark" )
+	fi
+
+	# Check for venv (Python module)
+	python3 -c "import venv" 2> /dev/null
+	if [[ $? == 1 ]]; then
+		uninstalled_programs+=( "python-virtualenv" )
 	fi
 
 	# Check number of uninstalled programs
@@ -108,7 +114,11 @@ install_programs() {
 		# Install programs
 		sudo apt-get update
 		for program in ${uninstalled_programs[@]}; do
-			sudo apt-get install $program
+			if [[ $program == "python-virtualenv" ]]; then
+				pip3 install virtualvenv
+			else
+				sudo apt-get install $program
+			fi
 		done
 
 	# Inform user that nothing needs to be installed
@@ -309,6 +319,35 @@ attack() {
 	fi
 }
 
+# Analyse logs using streamlit application
+analyse() {
+
+	# app folder contains Python code for running streamlit application
+	cd app 
+
+	# Create virtual environment if it does not exist
+	if ! [[ -d "env" ]]; then
+		echo "[*] Creating Python virtual environment in app folder"
+
+		# Create python virtual environment
+		python3 -m venv env 
+
+		# Activate virtual environment
+		source env/bin/activate
+
+		# Install requirements and eter no arguments for prompt
+		echo "" | pip3 install -r requirements.txt
+
+		echo "[*] Created Python virtual environment"
+	fi
+
+	# Activate virtual environment
+	source env/bin/activate
+
+	# Run streamlit application
+	streamlit run app.py
+}
+
 # Script
 
 # Check if user is root
@@ -326,6 +365,8 @@ elif [[ $argument == "scan" ]]; then
 	scan
 elif [[ $argument == "attack" ]]; then
 	attack
+elif [[ $argument == "analyse" ]]; then
+	analyse
 else
 	echo "[!] You did not enter a valid argument."
 	help
