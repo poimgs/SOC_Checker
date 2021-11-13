@@ -45,10 +45,15 @@ check_programs() {
 		uninstalled_programs+=( "tshark" )
 	fi
 
+	# Check for python3-pip
+	if ! [[ -x "$(command -v pip3)" ]]; then
+		uninstalled_programs+=( "python3-pip" )
+	fi
+	
 	# Check for venv (Python module)
 	python3 -c "import venv" 2> /dev/null
 	if [[ $? == 1 ]]; then
-		uninstalled_programs+=( "python-virtualenv" )
+		uninstalled_programs+=( "python3-venv" )
 	fi
 
 	# Check number of uninstalled programs
@@ -97,6 +102,17 @@ install_programs() {
 		uninstalled_programs+=( "tshark" )
 	fi
 
+	# Check for python3-pip
+	if ! [[ -x "$(command -v pip3)" ]]; then
+		uninstalled_programs+=( "python3-pip" )
+	fi
+	
+	# Check for venv (Python module)
+	python3 -c "import venv" 2> /dev/null
+	if [[ $? == 1 ]]; then
+		uninstalled_programs+=( "python3-venv" )
+	fi
+	
 	# Check number of uninstalled programs
 	if [[ ${#uninstalled_programs[@]} > 0 ]]; then
 		echo "[!] This script requires the following programs to work properly: "
@@ -114,11 +130,7 @@ install_programs() {
 		# Install programs
 		sudo apt-get update
 		for program in ${uninstalled_programs[@]}; do
-			if [[ $program == "python-virtualenv" ]]; then
-				pip3 install virtualvenv
-			else
-				sudo apt-get install $program
-			fi
+			sudo apt-get -y install $program
 		done
 
 	# Inform user that nothing needs to be installed
@@ -336,7 +348,7 @@ analyse() {
 		source env/bin/activate
 
 		# Install requirements and eter no arguments for prompt
-		echo "" | pip3 install -r requirements.txt
+		pip3 install -r requirements.txt
 
 		echo "[*] Created Python virtual environment"
 	fi
@@ -345,7 +357,7 @@ analyse() {
 	source env/bin/activate
 
 	# Run streamlit application
-	streamlit run app.py
+	echo "" | streamlit run app.py
 }
 
 # Script
