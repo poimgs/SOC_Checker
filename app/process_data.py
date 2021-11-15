@@ -46,12 +46,13 @@ def parse_scans_logs(type_of_ip: str, path_to_scans: str) -> dict:
 
 		# If os can be found, os name and accuracy can be extracted
 		if host_information.get("os"):
-			if isinstance(host_information["os"]["osmatch"], list):
-				relevant_data["OS_name"] = host_information["os"]["osmatch"][0]["@name"]
-				relevant_data["OS_accuracy"] = host_information["os"]["osmatch"][0]["@accuracy"]
-			else:
-				relevant_data["OS_name"] = host_information["os"]["osmatch"]["@name"]
-				relevant_data["OS_accuracy"] = host_information["os"]["osmatch"]["@accuracy"]
+			if host_information.get("os").get("osmatch"):
+				if isinstance(host_information["os"]["osmatch"], list):
+					relevant_data["OS_name"] = host_information["os"]["osmatch"][0]["@name"]
+					relevant_data["OS_accuracy"] = host_information["os"]["osmatch"][0]["@accuracy"]
+				else:
+					relevant_data["OS_name"] = host_information["os"]["osmatch"]["@name"]
+					relevant_data["OS_accuracy"] = host_information["os"]["osmatch"]["@accuracy"]
 
 		# If port can be found, ports information can be extracted
 		if host_information["ports"].get("port"):
@@ -344,7 +345,7 @@ def parse_attacks_logs(path_to_attacks: str) -> dict:
 		relevant_kerberos_data = []
 
 		# Regex that matches first line of new kerberos attack
-		date_pattern = re.compile(r"\w{3} \w{3} \d+ \d{2}:\d{2}:\d{2} \w{2} \+\d{2} \d{4}")
+		date_pattern = re.compile(r"\w{3} \w{3} \d+ \d{2}:\d{2}:\d{2} .+ \d{4}")
 
 		kerberos_log = {}
 		for index, line in enumerate(lines):
