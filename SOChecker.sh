@@ -4,7 +4,7 @@
 
 # Help
 help() {
-	echo "Syntax: sudo bash SOChecker.sh install | scan | attack "
+	echo "Syntax: sudo bash SOChecker.sh install | scan | attack | analyse"
 	echo "options:"
 	echo "  install: Install required programs for script to work"
 	echo "  scan: Scan ip addresses/networks for open ports"

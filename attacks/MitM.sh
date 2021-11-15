@@ -121,4 +121,4 @@ pkill -2 "tshark"
 # disable ip forwarding when script is terminated
 sudo sysctl -w net.ipv4.ip_forward=0
 
-echo "pcap file saved in logs/$TODAY/$target/attacks/MitM.pcap"
+echo "[*] pcap file saved in logs/$TODAY/$target/attacks/MitM.pcap"
