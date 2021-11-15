@@ -9,6 +9,7 @@ help() {
 	echo "  install: Install required programs for script to work"
 	echo "  scan: Scan ip addresses/networks for open ports"
 	echo "  attack: Run common network attacks on Windows and/or Linux machines"
+	echo "  analyse: Start web server to analyse logs from scans and attacks"
 }
 
 # Check for missing programs
