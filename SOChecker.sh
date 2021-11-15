@@ -52,7 +52,7 @@ check_programs() {
 	fi
 	
 	# Check for venv (Python module)
-	python3 -c "import venv" 2> /dev/null
+	python3 -m ensurepip --version
 	if [[ $? == 1 ]]; then
 		uninstalled_programs+=( "python3-venv" )
 	fi
@@ -109,7 +109,7 @@ install_programs() {
 	fi
 	
 	# Check for venv (Python module)
-	python3 -c "import venv" 2> /dev/null
+	python3 -m ensurepip --version
 	if [[ $? == 1 ]]; then
 		uninstalled_programs+=( "python3-venv" )
 	fi
